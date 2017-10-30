@@ -14,13 +14,31 @@ How to set up the application
 ```
 $ git clone https://github.com/diaryofdiscoveries/bank-tech-test.git
 $ cd bank-tech-test
-
+$ npm install
 ```
-- Given you make a deposit of 1000 on 10-01-2012
-- And a deposit of 2000 on 13-01-2012
-- And a withdrawal of 500 on 14-01-2012
-- When you print your bank statement
-- Then you would see:
+
+How to Run in the console:
+-------
+- Create a bank account by creating an instance of the bank account constructor object:
+```
+> account = new BankAccount();
+```
+- Run the following methods on the account to make a deposit of 1000 on 10-01-2012, a deposit of 2000 on 13-01-2012, and a withdrawal of 500 on 14-01-2012:
+```
+> account.deposit(1000, '2012-01-10');
+> account.deposit(2000, '2012-01-13');
+> account.withdraw(500, '2012-01-14');
+```
+- Create a bank statement by creating an instance of the bank statement constructor object, with account as an argument:
+```
+> statement = new BankStatement(account);
+```
+- Run the following method on the statement to print it:
+```
+> statement.print;
+```
+
+- You will see the following statement:
 
 ```
 date || credit || debit || balance
