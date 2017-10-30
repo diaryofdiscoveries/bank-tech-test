@@ -17,5 +17,15 @@
     this.record[this.record.length-1]["balance"]=this._balance
   };
 
+  BankAccount.prototype.withdraw = function(amount, today) {
+    if(amount>this._balance){
+      throw "Insufficient funds"
+      return
+    }
+    this._balance -= amount;
+    this.record.push({date:today, credit: "", debit:amount, balance:""});
+    this.record[this.record.length-1]["balance"]=this._balance
+  };
+
   exports.BankAccount = BankAccount;
 })(this);
