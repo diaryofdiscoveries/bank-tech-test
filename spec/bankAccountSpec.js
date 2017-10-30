@@ -11,4 +11,9 @@ describe("BankAccount", function() {
     expect(account.balance()).toEqual(0);
   });
 
+  it("should be able to deposit money", function() {
+    account.deposit(200, '30/10/2017');
+    expect(account.balance()).toEqual(200);
+  });
+
 });
