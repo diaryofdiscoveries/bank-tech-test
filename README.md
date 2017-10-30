@@ -35,7 +35,7 @@ How to Run in the console:
 ```
 - Run the following method on the statement to print it:
 ```
-> statement.print;
+> statement.print();
 ```
 
 - You will see the following statement:
