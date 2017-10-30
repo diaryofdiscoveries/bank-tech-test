@@ -7,7 +7,7 @@ describe("BankAccount", function() {
     account = new BankAccount();
   });
 
-  it("should have 0 balance to start with", function() {
+  it("should have zero balance to start with", function() {
     expect(account.balance()).toEqual(0);
   });
 
@@ -25,7 +25,7 @@ describe("BankAccount", function() {
   it("should not be able to withdraw money if there are insufficient funds", function() {
     expect(function() {
       account.withdraw(100, '31/10/2017');
-      }).toThrow("Insufficient funds")
+    }).toThrow("Insufficient funds");
   });
 
 });
